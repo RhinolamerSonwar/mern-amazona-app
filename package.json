@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/RhinolamerSonwar/mern-amazona-app#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.0"
   },
   "devDependencies": {
     "eslint": "^7.28.0",
