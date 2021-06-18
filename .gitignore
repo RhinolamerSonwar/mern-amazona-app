@@ -24,3 +24,4 @@ yarn-error.log*
 frontend/package-lock.json
 node_modules
 frontend/node_modules/.cache/.eslintcache
+frontend/node_modules/.cache/.eslintcache
