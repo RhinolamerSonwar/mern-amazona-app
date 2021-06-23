@@ -25,3 +25,7 @@ frontend/package-lock.json
 node_modules
 frontend/node_modules/.cache/.eslintcache
 frontend/node_modules/.cache/.eslintcache
+.env
+package-lock.json
+node_modules/.package-lock.json
+package-lock.json
