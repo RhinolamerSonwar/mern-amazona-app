@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import { signOut } from "./actions/userActions";
+import PlaceOrderScreen from "./reducers/PlaceOrderScreen";
 
 import CartScreen from "./Screens/CartScreen";
 import HomeScreen from "./Screens/HomeScreen";
@@ -61,9 +62,13 @@ function App() {
           <Route path="/register" component={RegisterScreen}></Route>
           <Route path="/shipping" component={ShippingAddressScreen}></Route>
           <Route path="/payment" component={PaymentMethodScreen}></Route>
+          <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
-        <footer className="row center"> All right reserved</footer>
+        <footer className="row center">
+          {" "}
+          All right reserved @RhinolamerSonwar
+        </footer>
       </div>
     </BrowserRouter>
   );
