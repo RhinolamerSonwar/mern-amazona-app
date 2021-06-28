@@ -18,18 +18,15 @@ mongoose.connect("process.env.MONGODB_URL || 'mongodb://localhost/amazona", {
 
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
-// <<<<<<< HEAD
 app.use("/api/orders", orderRouter);
-// =======
 app.get("/api/orders", orderRouter);
-// >>>>>>> f9f55cb5e904d4e57df387f137ccfe54c7202746
+app.get("/api/config/paypal", (req, res) => {
+  res.send(process.env.PAYPAL_CLIENT_ID || "sb");
+});
 app.get("/", (req, res) => {
   res.send("Server is ready");
 });
 
-// app.use((err, req, res, next) => {
-//   res.status(500).send({ message: err.message });
-// });
 // app.use((err, req, res, next) => {
 app.use((err, req, res) => {
   res.status(500).send({ message: err.message });
