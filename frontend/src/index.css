@@ -1,22 +1,26 @@
 html {
-  font-size: 62.5%; /* 16x */
+  font-size: 62.5%; /* 16px x 62.5 = 10px = 1rem */
   box-sizing: border-box;
 }
 body {
   margin: 0;
   height: 100vh;
   font-size: 1.6rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 #root {
   height: 100%;
 }
+
 /* Layout */
 .grid-container {
   display: grid;
-  grid-template-areas: "header" "main" "footer";
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
   grid-template-columns: 1fr;
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
@@ -34,7 +38,7 @@ footer {
   background-color: #203040;
   color: #ffffff;
 }
-/* common */
+/* Common */
 h1 {
   font-size: 1.8rem;
   padding: 1rem 0;
@@ -43,6 +47,7 @@ h2 {
   font-size: 1.6rem;
   padding: 1rem 0;
 }
+
 a {
   text-decoration: none;
 }
@@ -64,11 +69,10 @@ button {
   padding: 1rem;
   border-radius: 0.5rem;
   border: 0.1rem #a4a4a4 solid;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f8f8f8;
-  cursor: pointer;
 }
 button {
   background-color: #f8f8f8;
@@ -78,7 +82,6 @@ input:hover,
 select:hover,
 textarea:hover,
 button:hover {
-  cursor: pointer;
   border: 0.1rem #404040 solid;
 }
 button.primary {
@@ -87,7 +90,10 @@ button.primary {
 button.block {
   width: 100%;
 }
-/*header */
+button.small {
+  font-size: 1.2rem;
+}
+/* Header */
 header a {
   color: #ffffff;
   padding: 1rem;
@@ -102,17 +108,15 @@ a.brand {
   color: #ffffff;
   border-radius: 50%;
   padding: 0.2rem 0.7rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-left: 0.2rem;
 }
-
 .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
-
 .row.center {
   justify-content: center;
 }
@@ -125,10 +129,11 @@ a.brand {
 .col-2 {
   flex: 2 1 50rem;
 }
-min-30 {
+.min-30 {
   min-width: 30rem;
 }
-/*.....Image....*/
+
+/* Image */
 img {
   border-radius: 0.5rem;
 }
@@ -143,7 +148,8 @@ img.medium {
 img.large {
   width: 100%;
 }
-/*.....Card....*/
+
+/* Card */
 .card {
   border: 0.1rem #c0c0c0 solid;
   background-color: #f8f8f8;
@@ -159,8 +165,7 @@ img.large {
 .price {
   font-size: 2rem;
 }
-
-/* Rating*/
+/* Rating */
 .rating span {
   color: #f0c040;
   margin: 0.1rem;
@@ -168,7 +173,7 @@ img.large {
 .rating span:last-child {
   color: #404040;
 }
-/*-----Alert---*/
+/* Alert */
 .loading {
   display: block !important;
 }
@@ -180,7 +185,7 @@ img.large {
 }
 .alert {
   padding: 1rem;
-  border: 00.1rem solid transparent;
+  border: 0.1rem solid transparent;
   border-radius: 0.5rem;
 }
 .alert-info {
@@ -195,7 +200,6 @@ img.large {
   color: #20a020;
   background-color: #eeffe0;
 }
-
 /* Form */
 .form {
   max-width: 60rem;
@@ -240,4 +244,21 @@ img.large {
 .checkout-steps > div.active {
   border-top-color: #f08000;
   color: #f08000;
+}
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table tbody tr:nth-of-type(odd) {
+  background-color: #f4f4f4;
+}
+.table td,
+.table th {
+  text-align: left;
+  border: 0.1rem solid #e4e4e4;
+  padding: 0.5rem;
+}
+.table button {
+  margin: 0 0.2rem;
 }
